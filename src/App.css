@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100vh;
   width: 100vw;
@@ -102,6 +106,8 @@ html, body {
 .homepage {
   display: grid;
   grid-template-rows: 2fr 3fr;
+  height: 100%;
+  width: 100%;
 }
 
 .homepage-title {
@@ -551,3 +557,26 @@ h5 {
   cursor: pointer;
   margin-bottom: 10px;
 }
+
+/* @media all and (max-width: 3000px) and (min-width: 1000px) { */
+
+  @media all and (min-width: 440px) {
+    .homepage-title {
+      text-align: center;
+    }
+
+    .homepage-title h3 {
+      font-size: 3em; 
+    }
+
+    .homepage-title h1 {
+      font-size: 5em;
+    }
+    .homepage-pic {
+      background-size: contain;
+      background-position: bottom right;
+    }
+    .resume-top {
+
+    }
+  }
