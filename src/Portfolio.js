@@ -1,38 +1,25 @@
 import React from 'react';
-import Codepen from 'react-codepen-embed';
-
-import JavaScript from './images/skills/JavaScript.png';
-import HTML from './images/skills/Html5.png';
-import Css from './images/skills/CSS3.png';
-import jQuery from './images/skills/JQuery.png';
-import PostgreSQL from './images/skills/PostgreSQL.png';
-import node from './images/skills/nodejsicon.png';
+import JavaScript from './images/skills/javascript.svg';
+import HTML from './images/skills/html5.svg';
+import Css from './images/skills/css3.svg';
+import jQuery from './images/skills/jquery-1.svg';
+import PostgreSQL from './images/skills/postgresql.svg';
+import graphql from './images/skills/graphql.svg';
+import node from './images/skills/nodejs-icon.svg';
 import express from './images/skills/express.svg';
-import react from './images/skills/reacticon.png';
+import mongo from './images/skills/mongodb.svg';
+import react from './images/skills/react.svg';
 import rn from './images/skills/reacticon.png';
-import python from './images/skills/Python2.png';
+import python from './images/skills/python-5.svg';
 import AWS from './images/skills/aws.png';
 import github from './images/skills/GitHub.png';
-import cramIT from './images/cramit_logo.png';
-import impactful from './images/impactful_logo.png';
-import impactful_movie from './images/impactful.mp4';
-import cramit_movie from './images/movie.mp4';
 
+let navigateCramit =(props) => props.history.push('/cramit');
+let navigateImpactful = (props) => props.history.push('/impactful');
+let navigatePhantom = (props) =>props.history.push('/phantom');
+let navigatePlanted = (props) => props.history.push('/planted');
 
-// const Loading = (props) => {
-//     if (props.error) {
-//       return (
-//         <div>Error</div>
-//       );
-//     } else {
-//       return (
-//         <div>Loading...</div>
-//       );
-//     }
-//   }
-
-
-let Portfolio = () => 
+let Portfolio = (props) =>
 <div className="portfolio">
     <div className="skills">
         <h3>My Toolbox</h3>
@@ -49,68 +36,33 @@ let Portfolio = () =>
         <li><img src={python}/><p>Python2</p></li>
         <li><img src={AWS} /><p>AWS</p></li>
         <li><img src={github}/><p>Git</p></li>
+        <li><img src={graphql}/><p>GraphQL</p></li>
+        <li><img src={mongo}/><p>MongoDB</p></li>
         </ul>
     </div>
-    <div className="projects">
-        <div className="single-project single-project-one">
-            <a href="https://github.com/codingandcaring/cramIT"> <img src={cramIT}></img></a>
-            <p>cramIT is an interactive way for software developers to prepare for upcoming interviews.  It features
-                flashcards with various relevant topics, an interactive chat feature for mock interviews, and a list of relevant 
-                job searches.   
-            </p>
-            <ul className="technologies"> 
-                <li><button>HTML/CSS</button></li>
-                <li><button>Node.js</button></li>
-                <li><button>Javascript</button></li>
-            </ul>
-            <ul className="technologies"> 
-                    <li><button>Websocket</button></li>
-                    <li><button>Express</button></li>
-                    <li><button>PostgreSQL</button></li>
-            </ul>
-            <div className="single-project-movie">
-                <li><video controls>
-                        <source src={cramit_movie} type="video/mp4"></source>
-                        I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
-                        </video></li>
-                <li>                            
-                    <Codepen
-                        hash="vjPGYv"
-                        user="codingandcaring"
-                        preview="false"
-                        />
+    <div className="projects-list">
+        <div className="projects-title">
+            <h3>Featured Projects</h3>
+            <h5>Click the title to learn more.</h5>
+        </div>
+        <ul className="projects-list-ul">
+            <li className="planted" onClick={() => navigatePlanted(props)}>
+                <h5>Planted</h5>
+                <p>Utilizing an arduino and Raspberry Pi, Planted collects data about a local plant environment and displays that data in a React Native Application.</p>
+            </li>
+            <li className="pc" onClick={() => navigatePhantom(props)}>
+                <h5>Phantom Closet</h5>
+                <p>Full-stack e-commerce site where users can view, search, and rent cards for the game Magic: The Gathering.</p>
                 </li>
-            </div>
-            </div>
-            <div className="single-project">
-                <a href="https://github.com/codingandcaring/impactful"><img src={impactful}></img></a>
-                <p>Impactful connects socially conscious people looking to donate time or money in the metro Atlanta area with reputable charity organizations.  
-                    It allows potential volunteers to search for charities by keyword and uses the Charity Navigator API and Google Maps API to list matching organizations and
-                    view them on the map.
-                </p>
-                <ul className="technologies"> 
-                    <li><button>HTML/CSS</button></li>
-                    <li><button>JavaScript</button></li>
-                </ul>
-                <ul className="technologies"> 
-                        <li><button>API</button></li>
-                        <li><button>jQuery</button></li>
-                    </ul>
-                    <div className="single-project-movie">
-                        <li><video controls>
-                                <source src={impactful_movie} type="video/mp4"></source>
-                                I'm sorry; your browser doesn't support HTML5 video in WebM with VP8/VP9 or MP4 with H.264.
-                                </video></li>
-                        <li>
-                            <Codepen
-                                hash="QmYogG"
-                                user="codingandcaring"
-                                preview="false"
-                                />
-                        </li> 
-                    </div>
-
-            </div>
+            <li className="cramit" onClick={() => navigateCramit(props)}>
+                <h5>cramIT</h5>
+                <p>Full-stack project that assists users in preparing for the software development job search and interviews.</p>
+            </li>
+            <li className="impactful" onClick={() => navigateImpactful(props)}>                
+                <h5>Impactful</h5>
+                <p>Front-end website that connects potential volunteers with reputable local charities to maximize impact.</p>
+            </li>
+        </ul>
     </div>
 </div>
 

@@ -5,8 +5,13 @@ import Resume from './Resume';
 import Portfolio from './Portfolio';
 import About from './About';
 import Contact from './Contact';
+import Phantom from './Phantom';
+import Planted from './Planted';
+import Cramit from './Cramit';
+import Impactful from './Impactful';
 import Header from './Header';
 import Footer from './Footer';
+
 
 let Router = () => 
   <div>
@@ -18,6 +23,10 @@ let Router = () =>
             <Route path = "/resume" component={Resume} />
             <Route path = "/portfolio" component={Portfolio} />
             <Route path = "/contact" component={Contact} />
+            <Route path = "/phantom" component={Phantom} />
+            <Route path = "/planted" component={Planted} />
+            <Route path = "/cramit" component={Cramit} />
+            <Route path = "/impactful" component={Impactful} />
             <Footer/>
         </div>
     </HashRouter>

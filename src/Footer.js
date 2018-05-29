@@ -3,7 +3,6 @@ import envelope from './images/envelope.png';
 import linkedin from './images/linkedin_black.png';
 import medium from './images/medium_black.png';
 import github from './images/github_black.png';
-import {withRouter} from 'react-router';
 
 let openInNewTab= (url) => {
     let win =window.open(url, '_blank');

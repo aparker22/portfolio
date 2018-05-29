@@ -11,7 +11,7 @@ let Resume = () =>
         <a href={resume} download="ap_resume"><button >HERE</button></a>   
     </div>
     <div className="resume-hand">
-        <img src={hand}></img>
+        <img src={hand} alt="hand"></img>
     </div>
     {/* <div className="resume-bottom"></div> */}
     </div>
