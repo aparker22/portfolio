@@ -27,8 +27,9 @@ html, body {
   grid-auto-rows: 60px 1fr 30px;
   grid-auto-columns: 1fr;
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(rgb(167, 151, 170), white);
+  min-height: 100vh;
+  max-height: 100vh;
+  /* background: linear-gradient(rgb(167, 151, 170), white); */
 }
 
 .header {
@@ -38,6 +39,8 @@ html, body {
   align-items: center;
   width: 100vw;
   height: 60px;
+  background-color: rgb(90, 31, 100);
+  color: white;
 }
 
 .header-logo {
@@ -70,7 +73,7 @@ html, body {
 
 .header-links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.3em;
   height: 100%;
   display: flex;
@@ -270,6 +273,11 @@ textarea {
   margin: 10px;
   border: none;
   font-size: 1.3em;
+  border: 1px lightgray solid;
+  cursor: text;
+  padding: 1px;
+  border-width: 2px;
+  border-style: inset;
 }
 
 .contact-button {
