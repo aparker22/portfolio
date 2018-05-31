@@ -19,5 +19,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage" : "https://codingandcaring.github.io/portfolio/"
+  "homepage" : "https://codingandcaring.github.io"
 }
